@@ -25,13 +25,7 @@ enum Endpoint {
         }
     }
 
-    
     var fullPath: String {
         return "\(Constants.baseURL)\(path)?country=\(countryCode)&apiKey=\(Constants.apiKey)"
     }
-}
-
-
-enum ImagePath {
-    case image, allAPI
 }

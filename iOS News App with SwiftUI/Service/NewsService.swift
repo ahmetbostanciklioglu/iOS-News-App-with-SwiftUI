@@ -11,7 +11,6 @@ import Foundation
 class NewsService {
     static let shared = NewsService()
 
-    
     func fetchTopHeadlines<T: Decodable>(endpoint: Endpoint,  completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = URL(string: endpoint.fullPath) else {
             completion(.failure(NetworkError.invalidURL))
